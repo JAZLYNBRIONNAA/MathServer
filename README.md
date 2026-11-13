@@ -93,8 +93,8 @@ ex3page.html
 <img width="1920" height="1080" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/5279176f-f81b-4392-b1ac-77de81ab3771" />
 
 ## OUTPUT - WEBPAGE:
-<img width="1920" height="1080" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/d0748330-5655-4bd2-84f7-7b846cd67da6" />
 
+<img width="1920" height="1080" alt="Screenshot (24)" src="https://github.com/user-attachments/assets/165affef-de32-46a8-8189-aadaedd6db46" />
 
 ## RESULT:
 The the web page to calculate Churn Rate using server-side scripts is created successfully.

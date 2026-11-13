@@ -90,7 +90,7 @@ ex3page.html
 
 ## OUTPUT - SERVER SIDE:
 
-<img width="1920" height="1080" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/5279176f-f81b-4392-b1ac-77de81ab3771" />
+<img width="1920" height="1080" alt="Screenshot (25)" src="https://github.com/user-attachments/assets/c2d6e769-d635-4bb6-b0d6-04585436e495" />
 
 ## OUTPUT - WEBPAGE:
 

@@ -1,5 +1,5 @@
 # Ex.03 Design a Website for Server Side Processing
-## Date:
+## Date:13.11.2026
 
 ## AIM:
 To create a web page to calculate Churn Rate using server-side scripts.
@@ -42,12 +42,58 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+```
+views.py
 
+from django.shortcuts import render
+
+def calculate_churnrate(request):     
+        initialcust=int(request.POST.get('initialcust', '0'))
+        presentcust=int(request.POST.get('presentcust', '0'))
+        churnrate=((initialcust-presentcust)/initialcust)*100 if request.method=='POST' else 0
+        print(f"Initial Customers: {initialcust} \n Present Customers: {presentcust} \n churn rate: {churnrate}")
+        return render(request, 'myapp3/ex3page.html', {'initialcust':  initialcust, 'presentcust': presentcust, 'churnrate': churnrate})
+
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from myapp3 import views
+
+urlpatterns=[
+    path('',views.calculate_churnrate, name='calculate_churnrate'),
+]
+
+ex3page.html
+
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <body bgcolor="beige">
+        <h1 align="center">CHURN RATE CALCULATION</h1>
+        <h3 align="center">JAZLYNBRIONNA A<br>26016009</h3>
+        <form method="POST">
+        {%csrf_token%}
+            <br><br><br><label>NUMBER OF INITIAL CUSTOMERS:</label>
+            <input type="number" name="initialcust" value={{initialcust}}><br><br>
+            <label>NUMBER OF PRESENT CUSTOMERS:</label>
+            <input type="number" name="presentcust" value={{presentcust}}><br><br>
+            <input type="submit" value="calculate now"><br><br>
+            <label>CHURN RATE:</label>
+            <input type="number" name="churnrate" value={{churnrate}}>
+        </form>           
+    </body>
+</html>
+
+```
 
 ## OUTPUT - SERVER SIDE:
 
+<img width="1920" height="1080" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/5279176f-f81b-4392-b1ac-77de81ab3771" />
 
 ## OUTPUT - WEBPAGE:
+<img width="1920" height="1080" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/d0748330-5655-4bd2-84f7-7b846cd67da6" />
 
 
 ## RESULT:
